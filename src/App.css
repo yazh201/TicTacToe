@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --winner-color: #e09f3e;
+  --x-color: #9e2a2b;
+  --o-color: #335c67;
+  --board-color: #540b0e;
+  --reset-color: ;
+}
+
+.container {
+  background: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+}
+
+.title-winner {
+  background: var(--winner-color);
+  color: var(--bg-color);
+  text-align: center;
+  font-family: Outfit;
+  font-size: 56px;
+  font-weight: 900;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.x-wins {
+  background: var(--x-color);
+  color: var(--bg-color);
+  font-family: "Rubik Scribble";
+  font-size: 56px;
+  font-weight: 900;
+  padding: 8px 16px;
+  border-radius: 16px;
+}
+
+.o-wins {
+  background: var(--o-color);
+  color: var(--bg-color);
+  font-family: "Rubik Scribble";
+  font-size: 56px;
+  font-weight: 900;
+  padding: 8px 16px;
+  border-radius: 16px;
+}
+
+.board {
+  background: var(--board-color);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 8px;
+  border-radius: 16px;
+}
+
+.box {
+  background: var(--bg-color);
+  border: 0;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.x {
+  color: var(--x-color);
+  font-size: 56px;
+  font-weight: 900;
+  font-family: "Rubik Scribble";
+}
+
+.o {
+  color: var(--o-color);
+  font-size: 56px;
+  font-weight: 900;
+  font-family: "Rubik Scribble";
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  font-family: Outfit;
+  font-weight: 700;
+  font-size: 32px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.value {
+  padding: 8px 48px;
+}
+
+.x-value {
+  background: var(--x-color);
+  color: var(--bg-color);
+  padding: 8px 48px;
+  border-radius: 8px 0 0 8px;
+}
+
+.o-value {
+  background: var(--o-color);
+  color: var(--bg-color);
+  padding: 8px 48px;
+  border-radius: 0 8px 8px 0;
+}
+
+.reset-btn {
+  background: var(--winner-color);
+  color: var(--bg-color);
+  border: 0;
+  padding: 8px 16px;
+  font-family: Outfit;
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 786px) {
+  .container {
+    width: 100%;
+  }
+
+  .title-winner,
+  .x-wins,
+  .o-wins {
+    font-size: 40px;
+  }
+
+  .value,
+  .x-value,
+  .o-value {
+    font-size: 24px;
+  }
+
+  .box {
+    width: 75px;
+    height: 75px;
+  }
+}
